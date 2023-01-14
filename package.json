@@ -1,0 +1,14 @@
+{
+  "name": "MedPortal",
+  "version": "1.0.0",
+  "homepage": "https://iburskiy.github.io/med-portal",
+  "scripts": {
+    "build": "npm run copy && npm run scss",
+    "scss": "sass --embed-sources styles.scss dist/styles.css",
+    "copy": "cp -r images dist/images/ && cp index.html dist/"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "sass": "^1.57.1"
+  }
+}
