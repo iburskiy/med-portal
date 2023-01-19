@@ -7,12 +7,15 @@ To publish the project:
 1) Build the project with `npm run build`. It builds the static content into `dist` folder.
 1) Publish the project: commit changes including `dist` folder. A build happens on each commit that publishes content to the link above.
 
-I created package.json and "scripts" section that copies `images` and `index.html` to `dist` folder.
-It also compiles scss files to css file in `dist` folder. 
-I checked in the repo to my github and then went to project settings > Pages > Build and deployment > Github Actions.
-It produced `.github/workflows/static.yml` in my project that I committed right into github web interface.
-Then I pulled it in IDE and changed the following line: `path: './dist'`. 
-Then after each commit I could see that new workflow appears in my project in Actions tab in github.
-
-`sass` package is installed only locally. It's automatically added to `node_modules/.bin`. It lets running the command in "scripts":
+What I did:
+Found the following info:
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
+I created package.json. `scripts > copy` section copies `images` and `index.html` to `dist` folder.
+`scripts > scss` compiles scss files to css file to `dist` folder. `sass` package is installed only locally. It's automatically added to `node_modules/.bin`. 
+It lets running the command in `scripts > scss`:
 `sass --embed-sources styles.scss dist/styles.css`
+I added the repo to my github and then went to `Settings > Pages > Build and deployment > Github Actions`.
+It produced `.github/workflows/static.yml` in the project asked to commit it right into github web interface.
+Then I pulled it in IDE and changed the following line: `path: './dist'` to make Github take static content from `dist` folder.
+Then after each commit I could see that a new workflow (or build) appears in my project in `Actions` tab in github.
+
