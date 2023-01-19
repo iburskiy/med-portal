@@ -8,7 +8,6 @@
     "copy": "cp -r images dist/images/ && cp index.html dist/"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "sass": "^1.57.1"
   }
 }

@@ -8,3 +8,6 @@ I checked in the repo to my github and then went to project settings > Pages > B
 It produced `.github/workflows/static.yml` in my project that I committed right into github web interface.
 Then I pulled it in IDE and changed the following line: `path: './dist'`. 
 Then after each commit I could see that new workflow appears in my project in Actions tab in github.
+
+`sass` package is installed only locally. It's automatically added to `node_modules/.bin`. It lets running the command in "scripts":
+`sass --embed-sources styles.scss dist/styles.css`
