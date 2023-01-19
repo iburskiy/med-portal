@@ -2,10 +2,12 @@
 
 The project has been published to Github Pages, namely to https://iburskiy.github.io/med-portal.
 
-To publish the project:
-1) Make some changes
-1) Build the project with `npm run build`. It builds the static content into `dist` folder.
-1) Publish the project: commit changes including `dist` folder. A build happens on each commit that publishes content to the link above.
+To build the project locally:
+- Run `npm run build`. It builds the static content into `dist` folder. Open index.html in browser.
+
+To publish the changes to Github public URL:
+- build the project locally with `npm run build`
+- commit changes including `dist` folder. A build happens on each commit that publishes content to the link above.
 
 What I did:
 Found the following info:
