@@ -2,6 +2,10 @@
 
 The project has been published to Github Pages, namely to https://iburskiy.github.io/med-portal.
 
+To create a new repository:
+In the upper-right corner of any page on Github, use the  drop-down menu, and select New repository.
+Add a name of the repository, select Private or Public, follow further instructions to run Git commands in CMD for the project.
+
 To build the project locally:
 - Run `npm run build`. It builds the static content into `dist` folder. Open index.html in browser.
 
